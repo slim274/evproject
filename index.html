@@ -14,162 +14,387 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Segoe UI,sans-serif;
+font-family:'Segoe UI',sans-serif;
 }
 
 body{
-background:#f4f6f5;
-height:100vh;
+background:#eef4f2;
+min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
+padding:20px;
 }
 
 .container{
 width:100%;
-max-width:430px;
-background:white;
-border-radius:18px;
+max-width:450px;
+background:#fff;
+border-radius:24px;
 overflow:hidden;
-box-shadow:0 20px 40px rgba(0,0,0,.08);
+box-shadow:0 20px 45px rgba(0,0,0,.08);
 }
+
+/* Header */
 
 .header{
 
-background:#0F4C35;
+background:linear-gradient(135deg,#0F4C35,#1A6B4A);
+
 padding:45px 30px;
+
 text-align:center;
+
 color:white;
+
 }
 
 .header i{
-font-size:60px;
+
+font-size:65px;
+
 color:#F0A500;
+
 margin-bottom:15px;
+
 }
 
 .header h1{
 
-font-size:28px;
-margin-bottom:10px;
+font-size:30px;
+
+margin-bottom:8px;
+
 }
 
 .header p{
 
-opacity:.8;
-font-size:14px;
-line-height:1.6;
+opacity:.9;
+
+line-height:1.7;
+
+font-size:15px;
+
 }
+
+/* Form */
 
 .form{
 
-padding:35px;
+padding:35px 30px;
+
+}
+
+.welcome{
+
+margin-bottom:30px;
+
+}
+
+.welcome h2{
+
+color:#0F4C35;
+
+margin-bottom:6px;
+
+}
+
+.welcome p{
+
+color:#777;
+
+line-height:1.6;
+
+font-size:14px;
+
 }
 
 .group{
 
-margin-bottom:20px;
+margin-bottom:22px;
+
 }
 
 .group label{
 
 display:block;
-font-size:14px;
+
 margin-bottom:8px;
+
+font-size:14px;
+
 font-weight:600;
+
 color:#555;
+
 }
 
 .input{
 
 position:relative;
+
 }
 
 .input i{
 
 position:absolute;
+
 left:15px;
-top:15px;
+
+top:50%;
+
+transform:translateY(-50%);
+
+font-size:20px;
+
 color:#888;
+
 }
 
 .input input{
 
 width:100%;
-padding:14px 15px 14px 45px;
+
+height:54px;
+
+padding-left:48px;
+
+padding-right:48px;
+
 border:1px solid #ddd;
-border-radius:10px;
+
+border-radius:12px;
+
 font-size:15px;
+
 outline:none;
+
 transition:.3s;
+
 }
 
 .input input:focus{
 
 border-color:#0F4C35;
+
+box-shadow:0 0 0 3px rgba(15,76,53,.08);
+
 }
+
+.password-toggle{
+
+position:absolute;
+
+right:15px;
+
+top:50%;
+
+transform:translateY(-50%);
+
+cursor:pointer;
+
+font-size:20px;
+
+color:#666;
+
+}
+
+/* Options */
 
 .options{
 
 display:flex;
+
 justify-content:space-between;
+
 align-items:center;
+
 margin-bottom:25px;
+
 font-size:14px;
+
+}
+
+.options label{
+
+display:flex;
+
+align-items:center;
+
+gap:8px;
+
+color:#666;
+
 }
 
 .options a{
 
-text-decoration:none;
 color:#0F4C35;
+
+text-decoration:none;
+
 font-weight:600;
+
 }
+
+/* Button */
 
 .login-btn{
 
 width:100%;
-padding:15px;
+
+height:55px;
+
 background:#0F4C35;
-color:white;
+
 border:none;
-border-radius:10px;
+
+border-radius:12px;
+
+color:white;
+
 font-size:16px;
+
+font-weight:600;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:10px;
+
 cursor:pointer;
+
 transition:.3s;
+
 }
 
 .login-btn:hover{
 
 background:#1A6B4A;
+
+transform:translateY(-2px);
+
 }
+
+/* Register */
 
 .register{
 
 margin-top:25px;
+
 text-align:center;
-font-size:14px;
+
+font-size:15px;
+
+color:#666;
+
 }
 
 .register a{
 
 color:#0F4C35;
+
 font-weight:bold;
+
 text-decoration:none;
+
 }
+
+/* Demo */
 
 .demo{
 
 margin-top:30px;
-background:#f8f8f8;
-padding:15px;
-border-radius:10px;
-font-size:13px;
-line-height:1.7;
+
+background:#f7f7f7;
+
+padding:18px;
+
+border-radius:14px;
+
+font-size:14px;
+
+line-height:1.8;
+
 }
 
 .demo strong{
 
 color:#0F4C35;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+body{
+
+padding:0;
+
+background:white;
+
+align-items:flex-start;
+
+}
+
+.container{
+
+max-width:100%;
+
+min-height:100vh;
+
+border-radius:0;
+
+box-shadow:none;
+
+}
+
+.header{
+
+padding:50px 25px;
+
+}
+
+.header h1{
+
+font-size:32px;
+
+}
+
+.header p{
+
+font-size:14px;
+
+}
+
+.form{
+
+padding:30px 22px 40px;
+
+}
+
+.options{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:15px;
+
+}
+
+.login-btn{
+
+height:58px;
+
+font-size:17px;
+
+}
+
 }
 
 </style>
@@ -187,25 +412,38 @@ color:#0F4C35;
 <h1>Camel Mobility</h1>
 
 <p>
+
 Smart EV Charging Platform<br>
-Powered by Nfc card, Wallet & OCPP
+
+Powered by RFID • Wallet • OCPP
+
 </p>
 
 </div>
 
 <div class="form">
 
+<div class="welcome">
+
+<h2>Welcome Back 👋</h2>
+
+<p>
+
+Login to access your wallet, NFC card and charging sessions.
+
+</p>
+
+</div>
+
 <div class="group">
 
-<label>Email</label>
+<label>Email Address</label>
 
 <div class="input">
 
 <i class="ti ti-mail"></i>
 
-<input
-type="email"
-placeholder="Enter your email">
+<input type="email" placeholder="Enter your email">
 
 </div>
 
@@ -219,9 +457,9 @@ placeholder="Enter your email">
 
 <i class="ti ti-lock"></i>
 
-<input
-type="password"
-placeholder="Enter your password">
+<input type="password" id="password" placeholder="Enter your password">
+
+<i class="ti ti-eye password-toggle" onclick="togglePassword()"></i>
 
 </div>
 
@@ -233,7 +471,7 @@ placeholder="Enter your password">
 
 <input type="checkbox">
 
- Remember me
+Remember Me
 
 </label>
 
@@ -241,7 +479,9 @@ placeholder="Enter your password">
 
 </div>
 
-<button class="login-btn">
+<button class="login-btn" onclick="login()">
+
+<i class="ti ti-login-2"></i>
 
 Login
 
@@ -257,9 +497,57 @@ Create Account
 
 </a>
 
+</div>
+
 
 
 </div>
+
+<script>
+
+function togglePassword(){
+
+const password=document.getElementById("password");
+
+const icon=document.querySelector(".password-toggle");
+
+if(password.type==="password"){
+
+password.type="text";
+
+icon.classList.remove("ti-eye");
+
+icon.classList.add("ti-eye-off");
+
+}else{
+
+password.type="password";
+
+icon.classList.remove("ti-eye-off");
+
+icon.classList.add("ti-eye");
+
+}
+
+}
+
+function login(){
+
+const btn=document.querySelector(".login-btn");
+
+btn.innerHTML='<i class="ti ti-loader-2 ti-spin"></i> Signing In...';
+
+btn.disabled=true;
+
+setTimeout(()=>{
+
+window.location.href="dashboard.html";
+
+},1500);
+
+}
+
+</script>
 
 </body>
 </html>
