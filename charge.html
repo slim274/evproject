@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Camel Mobility | Dashboard</title>
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
+<link rel="stylesheet" href="dashboard.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <div class="logo">
+
+        <i class="ti ti-bolt"></i>
+
+        <h2>Camel Mobility</h2>
+
+    </div>
+
+    <ul>
+
+       
+     <li class="active">
+    <a href="dashboard.html">
+        <i class="ti ti-layout-dashboard"></i>
+        Dashboard
+    </a>
+</li>
+
+<li>
+    <a href="charge.html">
+        <i class="ti ti-bolt"></i>
+        Charge
+    </a>
+</li>
+
+<li>
+    <a href="wallet.html">
+        <i class="ti ti-wallet"></i>
+        Wallet
+    </a>
+</li>
+
+<li>
+    <a href="history.html">
+        <i class="ti ti-history"></i>
+        History
+    </a>
+</li>
+
+<li>
+    <a href="profile.html">
+        <i class="ti ti-user"></i>
+        Profile
+    </a>
+</li>
+
+<li>
+    <a href="settings.html">
+        <i class="ti ti-settings"></i>
+        Settings
+    </a>
+</li>
+
+<li>
+    <a href="login.html">
+        <i class="ti ti-logout"></i>
+        Logout
+    </a>
+</li>
+    </ul>
+
+</div>
+
+<div class="main">
+
+<header>
+
+<div>
+
+<h1>Good Morning Ahmed 👋</h1>
+
+<p>
+
+Welcome back to Camel Mobility EV Charging Platform
+
+</p>
+
+</div>
+
+<div class="profile">
+
+<img src="https://i.pravatar.cc/100">
+
+<div>
+
+<h3>Ahmed Ibrahim</h3>
+
+<small>Customer</small>
+
+</div>
+
+</div>
+
+</header>
+
+
+
+<!-- ===========================
+     SELECT CHARGING STATION
+=========================== -->
+
+<section class="charge-section">
+
+    <div class="section-title">
+
+        <h2>Select Charging Station</h2>
+
+        <span class="ocpp-badge">
+            OCPP 1.6 / 2.0.1
+        </span>
+
+    </div>
+
+    <div class="station-grid">
+
+        <div class="station-card active">
+
+            <div class="station-icon">
+                <i class="ti ti-charging-pile"></i>
+            </div>
+
+            <div class="station-info">
+
+                <h3>Charger 1</h3>
+
+                <p>22 kW DC Fast Charger</p>
+
+                <small>CP-001</small>
+
+                <div class="status available">
+                    ● Available
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="station-card">
+
+            <div class="station-icon">
+                <i class="ti ti-charging-pile"></i>
+            </div>
+
+            <div class="station-info">
+
+                <h3>Charger 2</h3>
+
+                <p>11 kW AC Charger</p>
+
+                <small>CP-002</small>
+
+                <div class="status busy">
+                    ● In Use
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="station-card">
+
+            <div class="station-icon">
+                <i class="ti ti-charging-pile"></i>
+            </div>
+
+            <div class="station-info">
+
+                <h3>Charger 3</h3>
+
+                <p>22 kW AC Charger</p>
+
+                <small>CP-003</small>
+
+                <div class="status available">
+                    ● Available
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="station-card">
+
+            <div class="station-icon">
+                <i class="ti ti-charging-pile"></i>
+            </div>
+
+            <div class="station-info">
+
+                <h3>Charger 4</h3>
+
+            <p>50 kW DC Rapid</p>
+
+                <small>CP-004</small>
+
+                <div class="status available">
+                    ● Available
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================
+ CURRENT TARIFF & ESTIMATED CHARGE
+======================================= -->
+
+<section class="estimate-section">
+
+<div class="estimate-grid">
+
+    <!-- Estimated Charge -->
+
+    <div class="estimate-card">
+
+        <div class="estimate-icon">
+
+            <i class="ti ti-bolt"></i>
+
+        </div>
+
+        <div>
+
+            <h4>Estimated Charge</h4>
+
+            <h2 id="estimatedEnergy">
+
+                ~5.00 kWh
+
+            </h2>
+
+            <p>
+
+                Approx. 14 minutes
+
+            </p>
+
+            <strong>
+
+                Estimated Cost:
+                ₦2,000
+
+            </strong>
+
+        </div>
+
+    </div>
+
+    <!-- Tariff -->
+
+    <div class="estimate-card tariff">
+
+        <div class="estimate-icon tariff-icon">
+
+            <i class="ti ti-clock-hour-4"></i>
+
+        </div>
+
+        <div>
+
+            <h4>Current Tariff</h4>
+
+            <h2>
+
+                ₦<span id="tariffPrice">400</span>
+
+                <small>/kWh</small>
+
+            </h2>
+
+            <p id="tariffPeriod">
+
+                Day Tariff
+
+                (9:00 AM - 5:00 PM)
+
+            </p>
+
+            <span class="live-status">
+
+                ● Active Now
+
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =======================================
+     RFID TAP AREA
+======================================= -->
+
+<section class="nfc-section">
+
+    <div class="nfc-card">
+
+        <h2> Present your Camel Mobility RFID card to the charging station reader.</h2>
+
+       
+
+        <div id="nfcReader"
+             class="nfc-reader"
+             onclick="startChargingDemo()">
+
+            <span class="wave wave1"></span>
+            <span class="wave wave2"></span>
+            <span class="wave wave3"></span>
+
+            <div class="reader-circle">
+
+                <i id="readerIcon"
+                   class="ti ti-credit-card"></i>
+
+            </div>
+
+        </div>
+
+        <h3 id="readerStatus">
+
+            Waiting for RFID Card...
+
+        </h3>
+
+        <p class="tap-note">
+
+            Click the RFID reader above to simulate tapping your RFID card.
+
+        </p>
+
+    </div>
+
+
+</section>
+
+
+<!-- =======================================
+     CHARGING SESSION
+======================================= -->
+
+<section id="chargingSession" class="charging-session" style="display:none;">
+
+    <div class="charging-header">
+
+        <h2>
+
+            <i class="ti ti-bolt"></i>
+
+            Charging Session
+
+        </h2>
+
+        <span class="charging-status">
+
+            Charging
+
+        </span>
+
+    </div>
+
+    <div class="charging-grid">
+
+        <!-- Progress Circle -->
+
+        <div class="progress-box">
+
+            <div class="progress-circle">
+
+                <svg>
+
+                    <circle cx="90" cy="90" r="70"></circle>
+
+                    <circle id="progressBar"
+                            cx="90"
+                            cy="90"
+                            r="70"></circle>
+
+                </svg>
+
+                <div class="progress-text">
+
+                    <h1 id="batteryPercent">
+
+                        0%
+
+                    </h1>
+
+                    <small>Charging</small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Charging Details -->
+
+        <div class="charging-details">
+
+            <div class="detail-card">
+
+                <h4>Elapsed Time</h4>
+
+                <h2 id="elapsed">
+
+                    00:00
+
+                </h2>
+
+            </div>
+
+            <div class="detail-card">
+
+                <h4>Energy Delivered</h4>
+
+                <h2 id="energy">
+
+                    0.00 kWh
+
+                </h2>
+
+            </div>
+
+            <div class="detail-card">
+
+                <h4>Current Cost</h4>
+
+                <h2 id="cost">
+
+                    ₦0.00
+
+                </h2>
+
+            </div>
+
+            <div class="detail-card">
+
+                <h4>Charging Power</h4>
+
+                <h2>
+
+                    22 kW
+
+                </h2>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="charging-note">
+
+        <i class="ti ti-info-circle"></i>
+
+        To stop charging,
+
+        present your RFID card to the charger again.
+
+    </div>
+
+</section>
+
+<!-- =======================================
+     OCPP COMMUNICATION
+======================================= -->
+
+<section class="ocpp-section">
+
+    <div class="ocpp-card">
+
+        <div class="ocpp-header">
+
+            <h2>
+
+                <i class="ti ti-api"></i>
+
+                OCPP Communication
+
+            </h2>
+
+            <span class="ocpp-version">
+
+                OCPP 1.6 JSON
+
+            </span>
+
+        </div>
+
+        <div class="timeline">
+
+            <div class="timeline-item" id="ocpp1">
+
+                <div class="timeline-dot"></div>
+
+                <div>
+
+                    <h4>Authorize.req</h4>
+
+                    <p>Waiting...</p>
+
+                </div>
+
+            </div>
+
+            <div class="timeline-item" id="ocpp2">
+
+                <div class="timeline-dot"></div>
+
+                <div>
+
+                    <h4>Authorize.conf</h4>
+
+                    <p>Waiting...</p>
+
+                </div>
+
+            </div>
+
+            <div class="timeline-item" id="ocpp3">
+
+                <div class="timeline-dot"></div>
+
+                <div>
+
+                    <h4>StartTransaction.req</h4>
+
+                    <p>Waiting...</p>
+
+                </div>
+
+            </div>
+
+            <div class="timeline-item" id="ocpp4">
+
+                <div class="timeline-dot pulse"></div>
+
+                <div>
+
+                    <h4>MeterValues</h4>
+
+                    <p>Waiting...</p>
+
+                </div>
+
+            </div>
+
+            <div class="timeline-item" id="ocpp5">
+
+                <div class="timeline-dot"></div>
+
+                <div>
+
+                    <h4>StopTransaction.req</h4>
+
+                    <p>Waiting...</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================
+     CHARGING COMPLETE
+======================================= -->
+
+<section id="chargingComplete" class="complete-card" style="display:none;">
+
+    <div class="complete-icon">
+
+        <i class="ti ti-circle-check"></i>
+
+    </div>
+
+    <h2>Charging Complete</h2>
+
+    <p>
+
+        Your charging session has finished successfully.
+
+    </p>
+
+    <div class="receipt-grid">
+
+        <div class="receipt-item">
+
+            <span>Charging Station</span>
+
+            <strong>Charger 1 </strong>
+
+        </div>
+
+        <div class="receipt-item">
+
+            <span>Duration</span>
+
+            <strong id="completeTime">
+
+                00:00
+
+            </strong>
+
+        </div>
+
+        <div class="receipt-item">
+
+            <span>Energy Delivered</span>
+
+            <strong id="completeEnergy">
+
+                0.00 kWh
+
+            </strong>
+
+        </div>
+
+        <div class="receipt-item">
+
+            <span>Tariff</span>
+
+            <strong>
+
+                ₦<span id="completeTariff">
+
+                    400
+
+                </span>/kWh
+
+            </strong>
+
+        </div>
+
+        <div class="receipt-item">
+
+            <span>Total Cost</span>
+
+            <strong id="completeCost">
+
+                ₦0.00
+
+            </strong>
+
+        </div>
+
+        <div class="receipt-item">
+
+            <span>Wallet Balance</span>
+
+            <strong id="walletBalance">
+
+                ₦148,000
+
+            </strong>
+
+        </div>
+
+    </div>
+
+    <div class="complete-buttons">
+
+       <button
+class="receipt-btn"
+onclick="openReceipt()">
+
+View Receipt
+
+</button>
+
+        <button class="dashboard-btn">
+
+            Back to Dashboard
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ======================================
+        RECEIPT MODAL
+=======================================-->
+
+<div id="receiptModal" class="receipt-modal">
+
+    <div class="receipt-container">
+
+        <div class="receipt-header">
+
+            <i class="ti ti-receipt-2"></i>
+
+            <h2>Camel Mobility</h2>
+
+            <p>Charging Receipt</p>
+
+        </div>
+
+        <div class="receipt-body">
+
+            <div class="receipt-row">
+                <span>Receipt No</span>
+                <strong>CM-20260704-0001</strong>
+            </div>
+
+            <div class="receipt-row">
+                <span>Customer</span>
+                <strong>Ahmed Ibrahim</strong>
+            </div>
+
+            <div class="receipt-row">
+                <span>RFID Card</span>
+                <strong>CM000124</strong>
+            </div>
+
+            <div class="receipt-row">
+                <span>Vehicle</span>
+                <strong>BYD Dolphin</strong>
+            </div>
+
+            <div class="receipt-row">
+                <span>Charging Station</span>
+                <strong>Abuja CBD Station</strong>
+            </div>
+
+            <div class="receipt-row">
+                <span>Duration</span>
+                <strong id="receiptTime">00:00</strong>
+            </div>
+
+            <div class="receipt-row">
+                <span>Energy Delivered</span>
+                <strong id="receiptEnergy">0.00 kWh</strong>
+            </div>
+
+            <div class="receipt-row">
+                <span>Tariff</span>
+                <strong id="receiptTariff">₦400/kWh</strong>
+            </div>
+
+            <div class="receipt-row">
+                <span>Total Paid</span>
+                <strong id="receiptCost">₦0.00</strong>
+            </div>
+
+            <div class="receipt-row">
+                <span>Payment Method</span>
+                <strong>Wallet</strong>
+            </div>
+
+            <div class="receipt-row">
+                <span>Status</span>
+                <strong class="paid">
+
+                    PAID ✓
+
+                </strong>
+            </div>
+
+        </div>
+
+        <div class="receipt-footer">
+
+            <button onclick="closeReceipt()">
+
+                Close
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>
