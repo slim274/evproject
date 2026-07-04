@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Camel Mobility | Create Account</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,sans-serif;
+}
+
+body{
+background:#f4f7f5;
+display:flex;
+justify-content:center;
+padding:40px 15px;
+}
+
+.container{
+width:100%;
+max-width:500px;
+background:#fff;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.header{
+background:#0F4C35;
+padding:40px;
+text-align:center;
+color:white;
+}
+
+.header i{
+font-size:60px;
+color:#F0A500;
+margin-bottom:10px;
+}
+
+.header h1{
+font-size:28px;
+margin-bottom:8px;
+}
+
+.header p{
+font-size:14px;
+opacity:.85;
+line-height:1.6;
+}
+
+.form{
+padding:30px;
+}
+
+.group{
+margin-bottom:18px;
+}
+
+.group label{
+display:block;
+font-size:14px;
+margin-bottom:7px;
+font-weight:600;
+color:#555;
+}
+
+.group input,
+.group select{
+width:100%;
+padding:14px;
+border:1px solid #ddd;
+border-radius:10px;
+font-size:15px;
+outline:none;
+transition:.3s;
+}
+
+.group input:focus,
+.group select:focus{
+border-color:#0F4C35;
+}
+
+.row{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+}
+
+.status-card{
+
+margin-top:25px;
+padding:20px;
+background:#FFF8E8;
+border-left:5px solid #F0A500;
+border-radius:12px;
+}
+
+.status-card h3{
+color:#0F4C35;
+margin-bottom:10px;
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.badge{
+
+display:inline-block;
+padding:6px 12px;
+border-radius:20px;
+background:#ffe6a8;
+color:#8a5a00;
+font-size:13px;
+font-weight:bold;
+margin-bottom:12px;
+}
+
+.status-card p{
+
+font-size:14px;
+line-height:1.7;
+color:#666;
+}
+
+.progress{
+
+margin-top:25px;
+background:#f8f8f8;
+padding:20px;
+border-radius:12px;
+}
+
+.progress h4{
+
+margin-bottom:15px;
+color:#0F4C35;
+}
+
+.step{
+
+display:flex;
+align-items:center;
+gap:12px;
+margin-bottom:12px;
+font-size:14px;
+}
+
+.step i{
+
+font-size:22px;
+}
+
+.done{
+
+color:#16a34a;
+}
+
+.current{
+
+color:#F0A500;
+}
+
+.pending{
+
+color:#999;
+}
+
+button{
+
+margin-top:25px;
+width:100%;
+padding:15px;
+background:#0F4C35;
+color:white;
+border:none;
+border-radius:10px;
+font-size:16px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+
+background:#1A6B4A;
+}
+
+.footer{
+
+padding:25px;
+text-align:center;
+font-size:14px;
+}
+
+.footer a{
+
+color:#0F4C35;
+font-weight:bold;
+text-decoration:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+
+<i class="ti ti-user-plus"></i>
+
+<h1>Create Account</h1>
+
+<p>
+
+Join Camel Mobility and access
+EV charging stations using your RFID card.
+
+</p>
+
+</div>
+
+<div class="form">
+
+<div class="row">
+
+<div class="group">
+<label>First Name</label>
+<input type="text" placeholder="">
+</div>
+
+<div class="group">
+<label>Last Name</label>
+<input type="text" placeholder="">
+</div>
+
+</div>
+
+<div class="group">
+<label>Email Address</label>
+<input type="email" placeholder="">
+</div>
+
+<div class="group">
+<label>Phone Number</label>
+<input type="tel" placeholder="+2348012345678">
+
+</div>
+
+<div class="group">
+<label>Vehicle </label>
+
+<select>
+
+<option>Select Type</option>
+
+<option>Car</option>
+
+<option>Truck</option>
+
+<option>Other</option>
+
+</select>
+
+</div>
+
+
+
+
+
+<div class="row">
+
+<div class="group">
+<label>Password</label>
+<input type="password">
+</div>
+
+<div class="group">
+<label>Confirm Password</label>
+<input type="password">
+</div>
+
+</div>
+
+<div class="status-card">
+
+<h3>
+
+<i class="ti ti-credit-card"></i>
+
+RFID Card Status
+
+</h3>
+
+<div class="badge">
+
+Pending Issuance
+
+</div>
+
+<p>
+
+After your registration is completed and payment
+for the RFID card is confirmed,
+an administrator will issue and activate your RFID card.
+
+</p>
+
+</div>
+
+
+<button onclick="register()">
+
+Create Account
+
+</button>
+
+</div>
+
+<div class="footer">
+
+Already have an account?
+
+<a href="login.html">
+
+Login
+
+</a>
+
+</div>
+
+</div>
+
+<script>
+
+function register(){
+
+window.location.href="dashboard.html";
+
+}
+
+</script>
+
+</body>
+</html>
